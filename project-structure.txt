@@ -1,0 +1,55 @@
+.
+├── PROJECT_SUMMARY.md
+├── README.md
+├── backend
+│   ├── config
+│   │   └── supabase.js
+│   ├── middleware
+│   │   ├── auth.js
+│   │   └── tierCheck.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   ├── auth.js
+│   │   ├── brandVoices.js
+│   │   ├── payments.js
+│   │   ├── prompts.js
+│   │   ├── teams.js
+│   │   └── templates.js
+│   ├── server.js
+│   └── utils
+│       └── qualityScore.js
+├── database
+│   ├── schema.sql
+│   └── seed_templates.sql
+├── deployment
+│   ├── railway.json
+│   └── vercel-frontend.json
+├── docs
+│   ├── DEPLOYMENT_GUIDE.md
+│   └── SETUP_GUIDE.md
+├── frontend
+│   ├── components.json
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── jsconfig.json
+│   ├── package.json
+│   ├── pnpm-lock.yaml
+│   ├── public
+│   │   └── favicon.ico
+│   ├── src
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── hooks
+│   │   ├── index.css
+│   │   ├── lib
+│   │   └── main.jsx
+│   └── vite.config.js
+├── launch-materials
+│   └── appsumo-listing-copy.md
+├── marketing-website
+└── project-structure.txt
+
+17 directories, 35 files

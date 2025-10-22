@@ -1,0 +1,34 @@
+{
+  "version": 2,
+  "name": "promptgenius-app",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "frontend/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/$1"
+    }
+  ],
+  "env": {
+    "VITE_API_URL": "@api-url",
+    "VITE_SUPABASE_URL": "@supabase-url",
+    "VITE_SUPABASE_ANON_KEY": "@supabase-anon-key",
+    "VITE_STRIPE_PUBLISHABLE_KEY": "@stripe-publishable-key"
+  },
+  "build": {
+    "env": {
+      "VITE_API_URL": "@api-url",
+      "VITE_SUPABASE_URL": "@supabase-url",
+      "VITE_SUPABASE_ANON_KEY": "@supabase-anon-key",
+      "VITE_STRIPE_PUBLISHABLE_KEY": "@stripe-publishable-key"
+    }
+  }
+}
+
