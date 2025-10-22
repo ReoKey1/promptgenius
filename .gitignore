@@ -46,3 +46,7 @@ coverage/
 
 # Keep example env files
 !.env.example
+DEPLOYMENT_CREDENTIALS.md
+SUPABASE_SETUP.md
+stripe_credentials.txt
+DEPLOYMENT_STEPS.md
