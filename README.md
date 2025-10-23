@@ -1,8 +1,8 @@
-# PromptGenius
+# Prompt-U
 
 **The AI prompt optimization platform that makes your prompts better.**
 
-PromptGenius is a complete SaaS application that analyzes, scores, and optimizes AI prompts to help users get consistent, high-quality results from AI tools like ChatGPT, Claude, and others.
+Prompt-U is a complete SaaS application that analyzes, scores, and optimizes AI prompts to help users get consistent, high-quality results from AI tools like ChatGPT, Claude, and others.
 
 ## 🎯 What Is This?
 
@@ -299,19 +299,19 @@ promptgenius/
 
 ### vs. OnlyPrompts
 - ❌ OnlyPrompts: 150K prompts (quantity)
-- ✅ PromptGenius: Quality optimization
+- ✅ Prompt-U: Quality optimization
 - ✅ No monthly AI credit limits
 - ✅ Version control
 
 ### vs. PromptEngine
 - ❌ PromptEngine: Basic generation
-- ✅ PromptGenius: Quality scoring
+- ✅ Prompt-U: Quality scoring
 - ✅ Improvement suggestions
 - ✅ No generation limits
 
 ### vs. PromptBox
 - ❌ PromptBox: Simple storage
-- ✅ PromptGenius: Optimization
+- ✅ Prompt-U: Optimization
 - ✅ Brand voice profiles
 - ✅ Team collaboration
 

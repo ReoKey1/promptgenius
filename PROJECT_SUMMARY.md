@@ -1,4 +1,4 @@
-# PromptGenius - Complete Project Summary
+# Prompt-U - Complete Project Summary
 
 ## 🎉 What You Have
 
@@ -6,7 +6,7 @@ A **complete, production-ready SaaS application** ready to launch on AppSumo and
 
 ### Package Contents
 
-This package includes everything you need to launch PromptGenius:
+This package includes everything you need to launch Prompt-U:
 
 #### 1. Backend API (Node.js + Express)
 **Location:** `backend/`
@@ -248,7 +248,7 @@ This package includes everything you need to launch PromptGenius:
 - PromptEngine: Basic generation (no optimization)
 - PromptBox: Simple storage (no intelligence)
 
-**PromptGenius:**
+**Prompt-U:**
 - ✅ Quality scoring (0-100)
 - ✅ Improvement suggestions
 - ✅ Version control

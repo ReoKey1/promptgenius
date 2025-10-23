@@ -17,7 +17,7 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-background">
       <nav className="border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">PromptGenius</h1>
+          <h1 className="text-2xl font-bold">Prompt-U</h1>
           <div className="flex items-center gap-4">
             <span className="text-sm text-muted-foreground">
               {user?.name} ({user?.tier || 'Free'})
@@ -33,7 +33,7 @@ export default function DashboardPage() {
         <div className="mb-8">
           <h2 className="text-3xl font-bold mb-2">Welcome back, {user?.name}!</h2>
           <p className="text-muted-foreground">
-            Start optimizing your AI prompts with PromptGenius
+            Start optimizing your AI prompts with Prompt-U
           </p>
         </div>
 
