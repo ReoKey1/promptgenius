@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt-U Store | Official Merchandise</title>
+    <meta name="description" content="Shop official Prompt-U merchandise. T-shirts, hoodies, and accessories for AI prompt engineering enthusiasts.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #111827;
+            background: #ffffff;
+        }
+        
+        .nav {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 800;
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #2563eb;
+        }
+        
+        .btn {
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+        
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #4b5563;
+            margin-bottom: 40px;
+        }
+        
+        .products {
+            padding: 80px 20px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .product-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-color: #2563eb;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 25px;
+        }
+        
+        .product-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+        
+        .product-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+        
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .coming-soon {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="/landing-page/index.html" class="nav-logo">
+                <span>Prompt-U</span>
+            </a>
+            <div class="nav-links">
+                <a href="/landing-page/index.html#features" class="nav-link">Features</a>
+                <a href="/landing-page/index.html#pricing" class="nav-link">Pricing</a>
+                <a href="/blog/blog-post.html" class="nav-link">Blog</a>
+                <a href="/landing-page/index.html#video" class="nav-link">Video</a>
+                <a href="/landing-page/store.html" class="nav-link">Store</a>
+                <a href="https://app.prompt-u.com/login" class="nav-link">Login</a>
+                <a href="https://app.prompt-u.com/signup" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Prompt-U Official Store</h1>
+            <p>Premium merchandise for AI prompt engineering enthusiasts</p>
+            <span class="coming-soon">🚀 Launching Soon on Printify</span>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="../merch-files/social-media/instagram/tshirt-2023-ig-square.png" alt="Stop Prompting Like It's 2023 T-Shirt" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">"Stop Prompting Like It's 2023" T-Shirt</h3>
+                        <p class="product-description">
+                            Retro-style design with bold gradient typography. Perfect for AI enthusiasts who want to make a statement.
+                        </p>
+                        <div class="product-price">$29</div>
+                        <a href="#" class="btn btn-primary btn-block">Coming Soon</a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="../merch-files/social-media/instagram/tshirt-therapy-ig-square.png" alt="Your Prompts Deserve Therapy T-Shirt" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">"Your Prompts Deserve Therapy" T-Shirt</h3>
+                        <p class="product-description">
+                            Minimalist design with a humorous twist. Great conversation starter for tech meetups and conferences.
+                        </p>
+                        <div class="product-price">$29</div>
+                        <a href="#" class="btn btn-primary btn-block">Coming Soon</a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="../merch-files/social-media/instagram/tshirt-smarter-ig-square.png" alt="Prompt Smarter, Not Harder T-Shirt" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">"Prompt Smarter, Not Harder" T-Shirt</h3>
+                        <p class="product-description">
+                            Professional tech-inspired design with circuit board accents. Perfect for the modern AI professional.
+                        </p>
+                        <div class="product-price">$29</div>
+                        <a href="#" class="btn btn-primary btn-block">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bundle Section -->
+            <div style="text-align: center; margin-top: 80px; padding: 60px 20px; background: linear-gradient(135deg, #2563eb, #7c3aed); border-radius: 12px; color: white;">
+                <h2 style="font-size: 36px; margin-bottom: 20px;">Get All Three Designs</h2>
+                <p style="font-size: 20px; margin-bottom: 30px; opacity: 0.9;">Save $20 when you buy the complete collection</p>
+                <div style="font-size: 48px; font-weight: 800; margin-bottom: 30px;">$69 <span style="font-size: 24px; text-decoration: line-through; opacity: 0.7;">$87</span></div>
+                <a href="#" class="btn" style="background: white; color: #2563eb; padding: 15px 40px; font-size: 18px;">Notify Me When Available</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #f9fafb; padding: 40px 20px; text-align: center; margin-top: 80px;">
+        <div class="container">
+            <p style="color: #6b7280; margin-bottom: 10px;">© 2025 Prompt-U. All rights reserved.</p>
+            <p style="color: #6b7280;">Questions? Email us at <a href="mailto:store@prompt-u.com" style="color: #2563eb;">store@prompt-u.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
