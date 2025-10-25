@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt-U Blog - AI Prompt Engineering Tips & Guides</title>
+    <meta name="description" content="Learn how to write better AI prompts with expert guides on ChatGPT, Claude, Gemini, and prompt engineering best practices for teams and individuals.">
+    <meta name="keywords" content="AI prompts, prompt engineering, ChatGPT tips, Claude guide, Gemini comparison, AI tools, prompt optimization">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Prompt-U Blog - AI Prompt Engineering Guides">
+    <meta property="og:description" content="Expert guides on writing better AI prompts for ChatGPT, Claude, and Gemini.">
+    <meta property="og:image" content="https://prompt-u.com/assets/logo-main.png">
+    <meta property="og:url" content="https://prompt-u.com/blog/">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #1f2937;
+        }
+        
+        .logo {
+            height: 40px;
+            margin-right: 12px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #4b5563;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #2563eb;
+        }
+        
+        .nav-link.active {
+            color: #2563eb;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Blog Grid */
+        .blog-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .blog-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .blog-card-content {
+            padding: 30px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        
+        .blog-tag {
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        .blog-card h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1f2937;
+        }
+        
+        .blog-card p {
+            color: #4b5563;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: #2563eb;
+            font-weight: 600;
+            text-decoration: none;
+            transition: gap 0.3s;
+        }
+        
+        .read-more:hover {
+            gap: 8px;
+        }
+        
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #2563eb;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-link {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo-link">
+                <img src="../assets/logo-horizontal.png" alt="Prompt-U Logo" class="logo">
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#features" class="nav-link">Features</a>
+                <a href="../index.html#pricing" class="nav-link">Pricing</a>
+                <a href="./index.html" class="nav-link active">Blog</a>
+                <a href="../store.html" class="nav-link">Store</a>
+                <a href="../index.html" class="nav-link">Login</a>
+                <a href="../index.html" class="btn btn-primary" style="padding: 10px 24px; font-size: 16px;">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>The Prompt-U Blog</h1>
+            <p>Expert guides, tips, and strategies for mastering AI prompt engineering and getting better results from ChatGPT, Claude, Gemini, and other AI tools.</p>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <div class="blog-card" onclick="window.location.href='./chatgpt-prompt-optimization.html'">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">ChatGPT</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h2>How to Write Better ChatGPT Prompts: The Complete 2024 Guide</h2>
+                        <p>Master the art of prompt engineering with proven techniques that transform vague requests into precise, high-quality AI outputs. Learn the five-step framework used by professionals.</p>
+                        <a href="./chatgpt-prompt-optimization.html" class="read-more">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="blog-card" onclick="window.location.href='./ai-prompt-engineering-teams.html'">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Teams</span>
+                            <span>10 min read</span>
+                        </div>
+                        <h2>AI Prompt Engineering for Teams: Building a Scalable Prompt Library</h2>
+                        <p>Stop wasting time on duplicated effort and inconsistent quality. Learn how leading organizations build prompt libraries that transform AI from individual hacks into strategic team assets.</p>
+                        <a href="./ai-prompt-engineering-teams.html" class="read-more">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="blog-card" onclick="window.location.href='./chatgpt-vs-claude-vs-gemini.html'">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Comparison</span>
+                            <span>12 min read</span>
+                        </div>
+                        <h2>ChatGPT vs Claude vs Gemini: Which AI Tool is Best in 2024?</h2>
+                        <p>Cut through the hype with this comprehensive comparison. Discover which AI tool actually performs best for your specific use cases, from coding to content creation to analysis.</p>
+                        <a href="./chatgpt-vs-claude-vs-gemini.html" class="read-more">Read more</a>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 (Original) -->
+                <div class="blog-card" onclick="window.location.href='./blog-post.html'">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Fundamentals</span>
+                            <span>8 min read</span>
+                        </div>
+                        <h2>Why Your AI Prompts Suck (And How to Fix Them)</h2>
+                        <p>Discover the five critical mistakes that sabotage your AI outputs and learn the systematic approach to writing prompts that consistently deliver professional-quality results.</p>
+                        <a href="./blog-post.html" class="read-more">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Stop Guessing. Start Knowing.</h2>
+            <p>Get real-time quality scores and optimization suggestions for every prompt you write. Join thousands of professionals who've transformed their AI workflow with Prompt-U.</p>
+            <a href="../index.html" class="btn btn-primary">Try Prompt-U Free →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../index.html" class="footer-link">Home</a>
+                <a href="../index.html#features" class="footer-link">Features</a>
+                <a href="../index.html#pricing" class="footer-link">Pricing</a>
+                <a href="./index.html" class="footer-link">Blog</a>
+                <a href="../store.html" class="footer-link">Store</a>
+            </div>
+            <p style="color: #9ca3af;">&copy; 2024 Prompt-U. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

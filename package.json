@@ -1,0 +1,31 @@
+{
+  "name": "prompt-u",
+  "version": "1.0.0",
+  "description": "Prompt-U - AI Prompt Optimization Tool",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "stripe": "^14.10.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/prompt-u.git"
+  },
+  "keywords": [
+    "ai",
+    "prompts",
+    "optimization",
+    "chatgpt",
+    "prompt-engineering"
+  ],
+  "author": "Prompt-U Team",
+  "license": "MIT"
+}
+

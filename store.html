@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt-U Store | Official Merchandise</title>
+    <meta name="description" content="Shop official Prompt-U merchandise. T-shirts, hoodies, and accessories for AI prompt engineering enthusiasts.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #111827;
+            background: #ffffff;
+        }
+        
+        .nav {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: #374151;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #2563eb;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #eff6ff 0%, #f5f3ff 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+        
+        .products {
+            padding: 80px 0;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background: #f9fafb;
+        }
+        
+        .product-info {
+            padding: 30px;
+        }
+        
+        .product-name {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+        
+        .product-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+        
+        .btn-block {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .coming-soon {
+            background: #fef3c7;
+            color: #92400e;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .setup-section {
+            background: #f9fafb;
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+        
+        .setup-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .setup-card h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #111827;
+        }
+        
+        .setup-card h3 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2563eb;
+        }
+        
+        .setup-card ol, .setup-card ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .setup-card li {
+            margin-bottom: 10px;
+            color: #374151;
+        }
+        
+        .setup-card code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+        }
+        
+        .setup-card a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        
+        .setup-card a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    
+    <!-- Stripe.js -->
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container nav-container">
+            <a href="./index.html" class="nav-logo">
+                <span>Prompt-U</span>
+            </a>
+            <div class="nav-links">
+                <a href="./index.html#features" class="nav-link">Features</a>
+                <a href="./index.html#pricing" class="nav-link">Pricing</a>
+                <a href="./blog/index.html" class="nav-link">Blog</a>
+                <a href="./index.html#video" class="nav-link">Video</a>
+                <a href="./store.html" class="nav-link">Store</a>
+                <a href="./index.html" class="nav-link" onclick="setTimeout(() => openLoginModal(), 100); return true;">Login</a>
+                <a href="./index.html" class="btn btn-primary" onclick="setTimeout(() => openSignupModal(), 100); return true;">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Prompt-U Official Store</h1>
+            <p>Premium merchandise for AI prompt engineering enthusiasts</p>
+            <span class="coming-soon">🚀 Launching Soon on Printify</span>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="./assets/store/tshirt-2023.png" alt="Stop Prompting Like It's 2023 T-Shirt" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">"Stop Prompting Like It's 2023" T-Shirt</h3>
+                        <p class="product-description">
+                            Retro-style design with bold gradient typography. Perfect for AI enthusiasts who want to make a statement.
+                        </p>
+                        <div class="product-price">$29</div>
+                        <button class="btn btn-primary btn-block" onclick="checkout(this.dataset.product)" data-product="tshirt-2023">Buy Now - $29</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="./assets/store/tshirt-therapy.png" alt="Your Prompts Deserve Therapy T-Shirt" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">"Your Prompts Deserve Therapy" T-Shirt</h3>
+                        <p class="product-description">
+                            Minimalist design with a humorous twist. Great conversation starter for tech meetups and conferences.
+                        </p>
+                        <div class="product-price">$29</div>
+                        <button class="btn btn-primary btn-block" onclick="checkout(this.dataset.product)" data-product="tshirt-therapy">Buy Now - $29</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="./assets/store/tshirt-smarter.png" alt="Prompt Smarter, Not Harder T-Shirt" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-name">"Prompt Smarter, Not Harder" T-Shirt</h3>
+                        <p class="product-description">
+                            Professional design with tech-inspired circuit patterns. Motivational and stylish for productivity enthusiasts.
+                        </p>
+                        <div class="product-price">$29</div>
+                        <button class="btn btn-primary btn-block" onclick="checkout(this.dataset.product)" data-product="tshirt-smarter">Buy Now - $29</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Instructions Section -->
+    <section id="setup" class="setup-section">
+        <div class="container">
+            <div class="setup-card">
+                <h2>🛍️ Store Setup Instructions</h2>
+                <p>Follow these steps to connect your Prompt-U store to Printify and start selling merchandise.</p>
+
+                <h3>Option 1: Printify + Shopify Integration (Recommended)</h3>
+                <ol>
+                    <li><strong>Create Printify Account</strong>
+                        <ul>
+                            <li>Go to <a href="https://printify.com" target="_blank">printify.com</a></li>
+                            <li>Sign up for free account</li>
+                            <li>No upfront costs - pay only when you make a sale</li>
+                        </ul>
+                    </li>
+                    <li><strong>Upload Designs</strong>
+                        <ul>
+                            <li>Use the merchandise logo: <code>/assets/logo-merchandise.png</code></li>
+                            <li>Or use individual t-shirt designs from <code>/assets/store/</code></li>
+                            <li>Recommended: Upload all 3 designs</li>
+                        </ul>
+                    </li>
+                    <li><strong>Create Products</strong>
+                        <ul>
+                            <li>Select "Bella+Canvas 3001" (most popular unisex t-shirt)</li>
+                            <li>Colors: Black, White, Navy, Heather Gray</li>
+                            <li>Sizes: S, M, L, XL, 2XL, 3XL</li>
+                            <li>Set retail price: $29-35 (60-70% profit margin)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Connect to Shopify</strong>
+                        <ul>
+                            <li>In Printify, go to "My Stores"</li>
+                            <li>Click "Add Store" → Select Shopify</li>
+                            <li>Follow OAuth connection flow</li>
+                            <li>Publish products to Shopify</li>
+                        </ul>
+                    </li>
+                    <li><strong>Update Store Page</strong>
+                        <ul>
+                            <li>Replace "Set Up Store" buttons with Shopify product URLs</li>
+                            <li>Update <code>store.html</code> with live links</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Option 2: Printify + Direct Integration</h3>
+                <ol>
+                    <li><strong>Get Printify API Key</strong>
+                        <ul>
+                            <li>In Printify dashboard, go to Settings → API</li>
+                            <li>Generate API key</li>
+                            <li>Save securely in environment variables</li>
+                        </ul>
+                    </li>
+                    <li><strong>Use Printify API</strong>
+                        <ul>
+                            <li>Documentation: <a href="https://developers.printify.com" target="_blank">developers.printify.com</a></li>
+                            <li>Create products programmatically</li>
+                            <li>Handle orders via webhook</li>
+                        </ul>
+                    </li>
+                    <li><strong>Update Store Buttons</strong>
+                        <ul>
+                            <li>Link directly to Printify product pages</li>
+                            <li>Or build custom checkout with Stripe</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Option 3: Manual Fulfillment</h3>
+                <ol>
+                    <li><strong>Order Samples</strong>
+                        <ul>
+                            <li>Order 1-2 samples of each design</li>
+                            <li>Test quality before selling</li>
+                            <li>Take professional photos</li>
+                        </ul>
+                    </li>
+                    <li><strong>Set Up Payment</strong>
+                        <ul>
+                            <li>Add Stripe or PayPal buttons</li>
+                            <li>Collect orders manually</li>
+                            <li>Fulfill via Printify as orders come in</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>📋 Quick Links</h3>
+                <ul>
+                    <li><strong>Printify:</strong> <a href="https://printify.com" target="_blank">printify.com</a></li>
+                    <li><strong>Shopify:</strong> <a href="https://shopify.com" target="_blank">shopify.com</a></li>
+                    <li><strong>Design Files:</strong> <code>/assets/logo-merchandise.png</code>, <code>/assets/store/</code></li>
+                    <li><strong>Pricing Guide:</strong> See <code>/docs/BRAND_GUIDELINES.md</code></li>
+                </ul>
+
+                <h3>💰 Recommended Pricing</h3>
+                <ul>
+                    <li><strong>T-Shirts:</strong> $29-35 (Printify cost: ~$12, profit: $17-23)</li>
+                    <li><strong>Hoodies:</strong> $49-59 (Printify cost: ~$25, profit: $24-34)</li>
+                    <li><strong>Mugs:</strong> $19-24 (Printify cost: ~$8, profit: $11-16)</li>
+                    <li><strong>Stickers:</strong> $4-6 (Printify cost: ~$1.50, profit: $2.50-4.50)</li>
+                </ul>
+
+                <h3>🎯 Next Steps</h3>
+                <ol>
+                    <li>Choose integration option (Shopify recommended)</li>
+                    <li>Create Printify account</li>
+                    <li>Upload designs and create products</li>
+                    <li>Order samples to test quality</li>
+                    <li>Update store.html with live product links</li>
+                    <li>Launch and promote on social media!</li>
+                </ol>
+
+                <p style="margin-top: 30px; padding: 20px; background: #eff6ff; border-radius: 8px;">
+                    <strong>💡 Pro Tip:</strong> Start with Printify + Shopify integration. It's the easiest way to get started with no upfront costs. You only pay when you make a sale, and Printify handles all printing and shipping automatically.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stripe Checkout Script -->
+    <script>
+        // Initialize Stripe with your publishable key
+        const stripe = Stripe(process.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_YOUR_KEY_HERE');
+        
+        // Checkout function
+        async function checkout(productId) {
+            try {
+                // Show loading state
+                event.target.disabled = true;
+                event.target.textContent = 'Processing...';
+                
+                // Create checkout session
+                const response = await fetch('/api/create-checkout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        productId: productId,
+                        quantity: 1
+                    }),
+                });
+                
+                const session = await response.json();
+                
+                if (session.error) {
+                    alert('Error: ' + session.error);
+                    event.target.disabled = false;
+                    event.target.textContent = 'Buy Now - $29';
+                    return;
+                }
+                
+                // Redirect to Stripe Checkout
+                const result = await stripe.redirectToCheckout({
+                    sessionId: session.sessionId
+                });
+                
+                if (result.error) {
+                    alert(result.error.message);
+                    event.target.disabled = false;
+                    event.target.textContent = 'Buy Now - $29';
+                }
+            } catch (error) {
+                console.error('Checkout error:', error);
+                alert('An error occurred. Please try again.');
+                event.target.disabled = false;
+                event.target.textContent = 'Buy Now - $29';
+            }
+        }
+        
+        // Handle success/cancel redirects
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success')) {
+            // Show success message
+            const successDiv = document.createElement('div');
+            successDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #10b981; color: white; padding: 20px 40px; border-radius: 8px; font-weight: 600; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.2);';
+            successDiv.textContent = '✅ Order successful! Check your email for confirmation.';
+            document.body.appendChild(successDiv);
+            setTimeout(() => successDiv.remove(), 5000);
+        }
+        if (urlParams.get('canceled')) {
+            // Show canceled message
+            const cancelDiv = document.createElement('div');
+            cancelDiv.style.cssText = 'position: fixed; top: 20px; left: 50%; transform: translateX(-50%); background: #ef4444; color: white; padding: 20px 40px; border-radius: 8px; font-weight: 600; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.2);';
+            cancelDiv.textContent = '❌ Order canceled. No charges were made.';
+            document.body.appendChild(cancelDiv);
+            setTimeout(() => cancelDiv.remove(), 5000);
+        }
+    </script>
+</body>
+</html>
+
